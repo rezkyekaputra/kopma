@@ -5,8 +5,10 @@ title: "KOPMA - Koperasi Mahasiswa"
 tagline: "Kemandirian, Kebersamaan, dan Kesejahteraan Mahasiswa"
 description: "Website resmi Koperasi Mahasiswa (KOPMA) - Wadah kewirausahaan, layanan kebutuhan kampus, dan pengembangan ekonomi mahasiswa."
 
-url: "https://rezkyekaputra.github.io"
-baseurl: "/kopma"
+url: "https://nidun.unids.com"
+baseurl: ""
+#url: "https://rezkyekaputra.github.io"
+#baseurl: "/kopma"
 
 
 
