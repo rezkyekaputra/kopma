@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a class="site-logo" href="{{ '/' | relative_url }}">
+        <span class="logo-badge">K</span>
+        <span class="logo-text">KOPMA</span>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          {% for item in site.navigation %}
+            <li><a href="{{ item.url | relative_url }}" class="{% if page.url == item.url %}active{% endif %}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h3>{{ site.title }}</h3>
+        <p>{{ site.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tautan Cepat</h4>
+        <ul>
+          {% for item in site.navigation %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hubungi Kami</h4>
+        <p>Gedung Student Center Lt. 1<br>Email: kopma@kampus.ac.id</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; {{ site.time | date: '%Y' }} KOPMA. Dibuat dengan Jekyll.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
